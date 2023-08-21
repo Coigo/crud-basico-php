@@ -16,14 +16,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="style/geral.css">
 </head>
-<body>
-    <div class="bg-custom">
+<body class='bg-dark'>
+
 
         <div class="d-flex justify-content-center">
             
                 <div class="col-md-1 bg-div-success"></div>
                 <div class="col-md-8">
-                    <table id="table"class='table'>
+                    <table id="table"class='table table-dark'>
                     <thead>
                         <tr>
                             <th>Nome</th>
@@ -50,8 +50,7 @@
     
         </div>
     
-  
-</div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
 </body>
