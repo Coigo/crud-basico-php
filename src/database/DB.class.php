@@ -21,12 +21,12 @@
 ** ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS 
 ** FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. 
 **------------------------------------------------------------------------------ */
-if( file_exists('./conexao/config.php') ) {
-	include_once('./conexao/config.php');
-}else if( file_exists('../conexao/config.php') ){
-	include_once('../conexao/config.php');
-}else if( file_exists('../../conexao/config.php') ){
-	include_once('../../conexao/config.php');
+if( file_exists('./src/conexao/config.php') ) {
+	include_once('./src/conexao/config.php');
+}else if( file_exists('../src/conexao/config.php') ){
+	include_once('../src/conexao/config.php');
+}else if( file_exists('../../src/conexao/config.php') ){
+	include_once('../../src/conexao/config.php');
 }
 
 class DB

@@ -1,5 +1,7 @@
 <?php 
-    include '../database/DB.class.php';
+    session_start();
+    echo $_SESSION['perfil'];
+    include '../../src/database/DB.class.php';
 
     $database = new DB();
     $table_dados = 'usuarios';
@@ -14,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="style/geral.css">
+    <link rel="stylesheet" href="../style/geral.css">
 </head>
 <body class='bg-dark'>
 
@@ -34,9 +36,11 @@
                             <tr>
                                 <td><?php echo $row['nome'] ?></td>
                                 <td><?php echo $row['telefone'] ?></td>
-                                <td><?php echo $row['email'] ?></td>
-                                <td><a href="./create.php?id=<?= $row['id'] ?>">editar</a></td>
-                                <td><a class="btn btn-danger" href="./delete.php?id=<?= $row['id'] ?>">delete</a></td>
+                                <td><?php echo $row['email'] ?></td> 
+                                <?php if ( $_SESSION['perfil'] === '1' ): ?>
+                                        <td><a href="./create.php?id=<?= $row['id'] ?>">editar</a></td>
+                                        <td><a class="btn btn-danger" href="./delete.php?id=<?= $row['id'] ?>">delete</a></td>
+                                <?php endif ?>
                             </tr>
                             <?php endforeach?>
                         </thead>
